@@ -1,0 +1,18 @@
+export const galleryData = [
+    { id: 1, category: "Wedding", image: "/images/gallery/img1.png" },
+    { id: 2, category: "Wedding", image: "/images/gallery/img3.png" },
+    { id: 3, category: "Wedding", image: "/images/gallery/img5.png" },
+    { id: 4, category: "Birthday", image: "/images/gallery/img2.png" },
+    { id: 5, category: "Birthday", image: "/images/gallery/img7.png" },
+    { id: 6, category: "Corporate", image: "/images/gallery/img11.png" },
+    { id: 7, category: "Corporate", image: "/images/gallery/img10.png" },
+    { id: 8, category: "Tent", image: "/images/gallery/img4.png" },
+    { id: 9, category: "Tent", image: "/images/gallery/img8.webp" },
+    { id: 10, category: "Lighting", image: "/images/gallery/img6.png" },
+    { id: 11, category: "Wedding", image: "/images/gallery/img9.png" },
+    { id: 12, category: "Wedding", image: "/images/gallery/img12.png" },
+    { id: 13, category: "Wedding", image: "/images/gallery/img14.png" },
+    { id: 14, category: "Wedding", image: "/images/gallery/img15.png" },
+    { id: 15, category: "Wedding", image: "/images/gallery/img13.png" },
+    { id: 16, category: "Wedding", image: "/images/gallery/img16.png" },
+];
