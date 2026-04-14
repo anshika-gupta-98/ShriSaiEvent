@@ -14,10 +14,8 @@ export default function CallButton() {
 
         <button
           onClick={() => setOpen(!open)}
-          className="flex items-center justify-center w-12 h-12 rounded-full 
-          bg-gradient-to-r from-[var(--secondary-gold)] to-[var(--secondary-gold)]
-          text-black shadow-lg 
-          hover:scale-110 transition duration-300 z-10"
+          aria-label="Open call options"
+          className="flex items-center justify-center w-12 h-12 rounded-full  bg-gradient-to-r from-[var(--secondary-gold)] to-[var(--secondary-gold)] text-black shadow-lg  hover:scale-110 transition duration-300 z-10"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

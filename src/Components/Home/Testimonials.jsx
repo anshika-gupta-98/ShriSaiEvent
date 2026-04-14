@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { RiH3 } from "react-icons/ri";
 
 export default function Testimonials({ data }) {
   const [index, setIndex] = useState(0);
@@ -67,9 +68,9 @@ export default function Testimonials({ data }) {
           </div>
 
           {/* NAME */}
-          <h4 className="mt-4 theme-h4 text-[var(--secondary-gold)] tracking-wide">
+          <h3 className="mt-4 theme-h3 text-[var(--secondary-gold)] tracking-wide">
             {current.name}
-          </h4>
+          </h3>
 
         </div>
 
@@ -79,6 +80,8 @@ export default function Testimonials({ data }) {
             onClick={() =>
               setIndex((prev) => (prev - 1 + data.length) % data.length)
             }
+            aria-label="Previous slide"
+            title="Previous slide"
             className="p-2 rounded-full bg-[var(--primary-dark)]/70 text-[var(--text-light)] shadow-md backdrop-blur-md"
           >
             <FiChevronLeft className="text-xl" />
@@ -88,6 +91,8 @@ export default function Testimonials({ data }) {
             onClick={() =>
               setIndex((prev) => (prev + 1) % data.length)
             }
+            aria-label="Next slide"
+            title="Next slide"
             className="p-2 rounded-full bg-[var(--primary-dark)]/70 text-[var(--text-light)] shadow-md backdrop-blur-md"
           >
             <FiChevronRight className="text-xl" />
@@ -100,8 +105,9 @@ export default function Testimonials({ data }) {
             onClick={() =>
               setIndex((prev) => (prev - 1 + data.length) % data.length)
             }
-            className="p-3 rounded-full border border-[var(--text-light)]/60 bg-[var(--primary-dark)]/30 backdrop-blur-md 
-            hover:bg-[var(--secondary-gold)] hover:text-black transition duration-300 shadow-md cursor-pointer"
+            aria-label="Previous slide"
+            title="Previous slide"
+            className="p-3 rounded-full border border-[var(--text-light)]/60 bg-[var(--primary-dark)]/30 backdrop-blur-md hover:bg-[var(--secondary-gold)] hover:text-black transition duration-300 shadow-md cursor-pointer"
           >
             <FiChevronLeft />
           </button>
@@ -110,8 +116,9 @@ export default function Testimonials({ data }) {
             onClick={() =>
               setIndex((prev) => (prev + 1) % data.length)
             }
-            className="p-3 rounded-full border border-[var(--text-light)]/60 bg-[var(--primary-dark)]/30 backdrop-blur-md 
-            hover:bg-[var(--secondary-gold)] hover:text-black transition duration-300 shadow-md cursor-pointer"
+            aria-label="Next slide"
+            title="Next slide"
+            className="p-3 rounded-full border border-[var(--text-light)]/60 bg-[var(--primary-dark)]/30 backdrop-blur-md hover:bg-[var(--secondary-gold)] hover:text-black transition duration-300 shadow-md cursor-pointer"
           >
             <FiChevronRight />
           </button>
@@ -121,11 +128,10 @@ export default function Testimonials({ data }) {
           {data.map((_, i) => (
             <span
               key={i}
-              className={`w-2 h-2 rounded-full transition ${
-                i === index
+              className={`w-2 h-2 rounded-full transition ${i === index
                   ? "bg-[var(--secondary-gold)] cursor-pointer"
                   : "bg-[var(--text-light)]/40 cursor-pointer"
-              }`}
+                }`}
             ></span>
           ))}
         </div>

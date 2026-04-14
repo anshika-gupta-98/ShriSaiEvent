@@ -18,6 +18,7 @@ export default function HomeIntro({ data }) {
               src={data.image}
               alt="event"
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover"
             />
 

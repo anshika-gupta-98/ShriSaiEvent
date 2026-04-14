@@ -244,7 +244,7 @@ export default function Contact({ data }) {
                         <button
                             type="submit"
                             disabled={loading}
-                            className="w-full py-3 rounded-xl bg-[var(--secondary-gold)] text-black font-semibold flex items-center justify-center gap-2"
+                            className="w-full py-3 rounded-xl bg-[var(--secondary-gold)] text-black font-semibold flex items-center justify-center gap-2 cursor-pointer"
                         >
                             {loading ? "Sending..." : "Submit"}
                             <FiSend />
@@ -268,7 +268,11 @@ export default function Contact({ data }) {
 
                 {/* MAP */}
                 <motion.div className="rounded-3xl overflow-hidden border border-[var(--secondary-gold)]/20 shadow-md">
-                    <iframe src={contact.mapEmbed} className="w-full h-[350px]" />
+                    <iframe
+                        src={contact.mapEmbed}
+                        title="Google Map Location"
+                        className="w-full h-[350px]"
+                    />
                 </motion.div>
 
             </section>

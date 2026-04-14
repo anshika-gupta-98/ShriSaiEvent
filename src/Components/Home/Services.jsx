@@ -37,6 +37,7 @@ export default function HomeServices({ services }) {
                                         src={service.images[0]}
                                         alt={service.title}
                                         fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                         className="object-cover"
                                     />
 
@@ -56,7 +57,9 @@ export default function HomeServices({ services }) {
                                         src={service.images[0]}
                                         alt={service.title}
                                         fill
-                                        className="object-cover blur-[1px] scale-105" />
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                        className="object-cover blur-[1px] scale-105"
+                                    />
 
                                     {/* DARK OVERLAY */}
                                     <div className="absolute inset-0 bg-black/60"></div>

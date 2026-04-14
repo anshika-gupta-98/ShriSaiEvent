@@ -143,18 +143,26 @@ export default function Footer() {
                             const Icon = item.icon;
 
                             return (
-                                <Link key={i} href={item.link} target="_blank" className="group relative">
+                                <Link
+                                    key={i}
+                                    href={item.link}
+                                    target="_blank"
+                                    aria-label={item.label}
+                                    title={item.label}
+                                    className="group relative"
+                                >
+                                    {/* ✅ hidden accessible text */}
+                                    <span className="sr-only">{item.label}</span>
 
                                     <span className="absolute inset-0 rounded-full bg-[var(--secondary-gold)]/20 blur-xl opacity-0 group-hover:opacity-100 transition"></span>
 
                                     <div className="relative w-12 h-12 flex items-center justify-center rounded-full  
-                                    bg-gradient-to-br from-[var(--primary-mid)] to-[var(--primary-dark)] 
-                                    border transition duration-300 text-[var(--secondary-gold)] border-[var(--secondary-gold)]
-                                    hover:scale-110 active:scale-95
-                                    shadow-[var(--gold-shadow)]">
+        bg-gradient-to-br from-[var(--primary-mid)] to-[var(--primary-dark)] 
+        border transition duration-300 text-[var(--secondary-gold)] border-[var(--secondary-gold)]
+        hover:scale-110 active:scale-95
+        shadow-[var(--gold-shadow)]">
                                         <Icon />
                                     </div>
-
                                 </Link>
                             );
                         })}

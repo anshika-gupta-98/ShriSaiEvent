@@ -8,6 +8,7 @@ export default function WhatsAppButton() {
       href={`https://wa.me/${data.contact.phone.replace(/\D/g, "")}`}
       target="_blank"
       rel="noopener noreferrer"
+      aria-label="Chat on WhatsApp"
       className="fixed bottom-6 right-6 z-50 group"
     >
       <span className="absolute inset-0 rounded-full bg-green-500 opacity-30 animate-ping"></span>

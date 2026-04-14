@@ -18,7 +18,7 @@ export default function HomeHero({ data }) {
 
     const current = data[index];
 
-    
+
 
     return (
         <section className="relative w-full h-[70vh] sm:h-[80vh] md:h-[90vh] lg:h-screen flex items-end overflow-hidden">
@@ -29,10 +29,8 @@ export default function HomeHero({ data }) {
                 alt={current.title}
                 fill
                 priority
-                quality={100}
                 className="object-cover"
             />
-
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
 
             <div className="relative z-10 w-full px-6 md:px-16 pb-10 md:pb-16">
