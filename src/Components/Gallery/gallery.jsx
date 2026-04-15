@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { FiPlus } from "react-icons/fi";
@@ -15,10 +15,10 @@ export default function Gallery({ images }) {
   const currentImages = images.slice(start, start + ITEMS_PER_PAGE);
   const firstImage = currentImages[0];
   const restImages = currentImages.slice(1);
+  const sectionRef = useRef(null);
 
   return (
-    <section className="py-20 px-6 md:px-16 bg-gradient-to-b from-white to-gray-50">
-
+    <section ref={sectionRef} className="py-8 lg:py-20 px-4 md:px-8 bg-gradient-to-b from-white to-gray-50">
       {/* HERO + GRID */}
       <div className="grid lg:grid-cols-3 gap-6">
 
@@ -107,8 +107,17 @@ export default function Gallery({ images }) {
         {/* PREV */}
         <button
           disabled={page === 1}
-          onClick={() => setPage((p) => p - 1)}
-          className="px-4 py-2 rounded-full bg-white/70 backdrop-blur-md border border-gray-200 shadow hover:shadow-lg transition disabled:opacity-40 cursor-pointer" 
+          onClick={() => {
+            setPage((p) => p - 1);
+
+            setTimeout(() => {
+              sectionRef.current?.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }, 100);
+          }}
+          className="px-4 py-2 rounded-full bg-white/70 backdrop-blur-md border border-gray-200 shadow hover:shadow-lg transition disabled:opacity-40 cursor-pointer"
         >
           ←
         </button>
@@ -120,7 +129,16 @@ export default function Gallery({ images }) {
           return (
             <button
               key={i}
-              onClick={() => setPage(i + 1)}
+              onClick={() => {
+                setPage(i + 1);
+
+                setTimeout(() => {
+                  sectionRef.current?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                }, 100);
+              }}
               className="relative group"
             >
               {/* Glow */}
@@ -131,11 +149,10 @@ export default function Gallery({ images }) {
               {/* Button */}
               <span
                 className={`relative z-10 px-5 py-2 rounded-full font-medium transition-all duration-300
-                ${
-                  isActive
+                ${isActive
                     ? "bg-[#d4af37] text-black shadow-[0_0_20px_rgba(212,175,55,0.6)] scale-105"
                     : "bg-white/70 backdrop-blur-md border border-gray-200 text-gray-600 hover:text-black hover:scale-105"
-                }`}
+                  }`}
               >
                 {i + 1}
               </span>
@@ -146,7 +163,16 @@ export default function Gallery({ images }) {
         {/* NEXT */}
         <button
           disabled={page === totalPages}
-          onClick={() => setPage((p) => p + 1)}
+          onClick={() => {
+            setPage((p) => p + 1);
+
+            setTimeout(() => {
+              sectionRef.current?.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }, 100);
+          }}
           className="px-4 py-2 rounded-full bg-white/70 backdrop-blur-md border border-gray-200 shadow hover:shadow-lg transition disabled:opacity-40 cursor-pointer"
         >
           →

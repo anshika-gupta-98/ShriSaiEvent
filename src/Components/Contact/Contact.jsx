@@ -95,10 +95,10 @@ export default function Contact({ data }) {
         "overflow-hidden";
 
     return (
-        <div className="bg-[#f9fafb] text-gray-800 overflow-hidden">
+        <div className=" text-gray-800 overflow-hidden">
 
             {/* 🔥 CONTACT CARDS */}
-            <div className="container-wrapper grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-20 mb-10 relative z-10">
+            <div className="container-wrapper grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10 md:mt-20 mb-10 relative z-10">
 
                 {[
                     {
@@ -299,7 +299,7 @@ export default function Contact({ data }) {
                         <Link
                             href={justdial.link}
                             target="_blank"
-                            className="btn-primary px-8 py-3 rounded-full text-xl flex items-center justify-center gap-2 mx-auto"
+                            className="btn-primary px-8 py-3 rounded-full text-sm flex items-center justify-center gap-2 mx-auto"
                         >
                             <span>{justdial.label}</span>
                             <BsArrowUpRight />

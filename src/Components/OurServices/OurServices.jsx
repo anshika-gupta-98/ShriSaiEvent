@@ -11,7 +11,7 @@ export default function ServicesSection({ services }) {
   const detailed = services.slice(10, 14);
 
   return (
-    <section className="bg-white text-[var(--text-gray)] py-14 md:py-20 px-4 md:px-8">
+    <section className="bg-white text-[var(--text-gray)] py-10 md:py-20 px-2 md:px-6">
 
       <div className="container-wrapper">
 
@@ -152,6 +152,9 @@ function SliderCard({ service, big }) {
           src={images[index] || "/images/our-services/wedding1.jpg"}
           alt={service.title}
           fill
+          sizes="(max-width: 640px) 100vw, 
+         (max-width: 1024px) 50vw, 
+         33vw"
           className="object-cover transition duration-700 group-hover:scale-105"
         />
 
@@ -223,6 +226,7 @@ function DetailedImage({ service }) {
           src={images[index]}
           alt={service.title}
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover transition duration-700 group-hover:scale-110"
         />
 
@@ -256,10 +260,7 @@ function ImageModal({ images, index, setIndex, onClose }) {
 
       <button
         onClick={onClose}
-        className="absolute top-6 right-6 text-[var(--text-light)] 
-        bg-black/40 hover:bg-black/60 backdrop-blur-md 
-        p-3 rounded-full transition cursor-pointer"
-      >
+        className="absolute top-4 right-4 md:top-6 md:right-6 z-50 text-[var(--text-light)] bg-black/40 hover:bg-black/60 backdrop-blur-md p-3 rounded-full transition cursor-pointer" >
         <IoClose size={24} />
       </button>
 
@@ -267,8 +268,7 @@ function ImageModal({ images, index, setIndex, onClose }) {
         onClick={() =>
           setIndex((prev) => (prev - 1 + images.length) % images.length)
         }
-        className="absolute left-6 text-[var(--text-light)] text-4xl cursor-pointer"
-      >
+        className="absolute left-4 md:left-6 z-50 text-[var(--text-light)] text-4xl cursor-pointer"      >
         <ChevronLeftCircleIcon />
       </button>
 

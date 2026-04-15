@@ -12,7 +12,7 @@ export default function About({ data }) {
   const [modalImage, setModalImage] = useState(null);
 
   return (
-    <section className="relative bg-[var(--overlay-light)] py-8  overflow-hidden">
+    <section className="relative bg-[var(--overlay-light)] py-4 lg:py-8  overflow-hidden">
 
       <div className="container-wrapper grid lg:grid-cols-12 gap-0 items-center">
 

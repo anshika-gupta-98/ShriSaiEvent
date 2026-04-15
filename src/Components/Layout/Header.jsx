@@ -26,7 +26,7 @@ export default function Header() {
             alt="logo"
             width={140}
             height={100}
-            className="h-[75px] md:h-[75px] w-auto object-cover scale-180"
+            className="h-[50px] md:h-[75px] w-auto object-cover scale-180"
             priority
           />
           <div>
@@ -36,7 +36,7 @@ export default function Header() {
               </span>
             </h1>
 
-            <p className="text-[var(--light-gray)] tracking-widest mt-1">
+            <p className="text-[var(--light-gray)] tracking-widest mt-1 text-xs sm:text-base">
               {data.tagline}
             </p>
           </div>
@@ -68,7 +68,7 @@ export default function Header() {
       </div>
 
       <div
-        className={`fixed top-[90px]  right-0 h-[calc(100%-100px)] w-[75%] max-w-sm bg-gradient-to-b from-[var(--primary-dark)]/85 via-[var(--primary-mid)]/75 to-[var(--primary-dark)]/85 backdrop-blur-md px-6 py-8 z-40 transform transition-all duration-500 ease-in-out ${isOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"}`}>
+        className={`fixed top-[68px] md:top-[90px]  right-0 h-[calc(100%-100px)] w-[75%] max-w-sm bg-gradient-to-b from-[var(--primary-dark)]/85 via-[var(--primary-mid)]/75 to-[var(--primary-dark)]/85 backdrop-blur-md px-6 py-8 z-40 transform transition-all duration-500 ease-in-out ${isOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"}`}>
 
         <div className="absolute top-10 right-10 w-40 h-40 bg-[var(--secondary-gold)]/20 blur-3xl rounded-full"></div>
 
@@ -82,14 +82,14 @@ export default function Header() {
               key={item.name}
               href={item.href}
               onClick={() => setIsOpen(false)}
-              className="hover:text-[var(--secondary-gold)] transition duration-300 text-xl md:text-2xl"
+              className="hover:text-[var(--secondary-gold)] transition duration-300 text-base md:text-2xl"
             >
               {item.name}
             </Link>
           ))}
 
           <Link href="/contact#contact-form" onClick={() => setIsOpen(false)}>
-            <button className="mt-4 px-6 py-2 rounded-full border border-[var(--secondary-gold)] text-[var(--secondary-gold)] font-semibold hover:bg-[var(--secondary-gold)] hover:text-black transition duration-300 text-xl">
+            <button className="mt-4 px-4 md:px-6 py-2 rounded-full border border-[var(--secondary-gold)] text-[var(--secondary-gold)] font-semibold hover:bg-[var(--secondary-gold)] hover:text-black transition duration-300 text-base md:text-xl">
               Request Quote
             </button>
           </Link>

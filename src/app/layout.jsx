@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
         <CallButton />
         <WhatsAppButton />
         <ScrollButton />
-        <main className="min-h-screen  overflow-x-hidden pt-22">
+        <main className="min-h-screen  overflow-x-hidden pt-17  md:pt-22">
           {children}
         </main>
         <Footer />

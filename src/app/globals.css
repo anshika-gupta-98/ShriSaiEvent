@@ -26,7 +26,7 @@
 
 @layer components {
   .theme-h1 {
-    @apply text-3xl md:text-4xl font-bold 
+    @apply  text-2xl sm:text-3xl md:text-4xl font-bold 
   }
 
   .theme-h2 {

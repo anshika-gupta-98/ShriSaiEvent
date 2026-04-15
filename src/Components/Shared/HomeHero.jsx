@@ -18,10 +18,8 @@ export default function HomeHero({ data }) {
 
     const current = data[index];
 
-
-
     return (
-        <section className="relative w-full h-[70vh] sm:h-[80vh] md:h-[90vh] lg:h-screen flex items-end overflow-hidden">
+        <section className="relative w-full h-[50vh] sm:h-[70vh] md:h-[60vh] lg:h-[85vh]  flex items-end overflow-hidden">
 
             <Image
                 key={current.image}
@@ -41,14 +39,14 @@ export default function HomeHero({ data }) {
                         {current.title}
                     </h2>
 
-                    <p className="text-white/90 text-sm sm:text-base md:text-lg mb-5">
+                    <p className="text-white/90 text-xs sm:text-base md:text-lg mb-5">
                         {current.description}
                     </p>
 
 
-                    <Link href={current.link} className="btn-primary">
+                    <Link href={current.link} className="btn-primary text-xs px-2 py-2">
                         {current.buttonText}
-                        <FiArrowUpRight className="text-lg" />
+                        <FiArrowUpRight className="text-sm" />
                     </Link>
                 </div>
             </div>
