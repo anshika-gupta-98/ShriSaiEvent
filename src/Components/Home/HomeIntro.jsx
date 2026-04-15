@@ -29,7 +29,7 @@ export default function HomeIntro({ data }) {
         </div>
 
         <div className="order-1 lg:order-2">
-          <p className="text-[var(--secondary-gold)] text-2xl mb-2 script-subtitle">
+          <p className="text-[var(--secondary-gold)] text-2xl md:text-3xl mb-2 script-subtitle">
             {data.subtitle}
           </p>
 

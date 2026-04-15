@@ -8,7 +8,7 @@ export default function HomeServices({ services }) {
             <div className="container-wrapper">
 
                 <div className="text-left lg:text-center mb-16">
-                    <p className="text-(--secondary-gold) text-2xl mb-2 serif-subtitle ">
+                    <p className="text-(--secondary-gold) text-2xl md:text-3xl mb-2 serif-subtitle ">
                         Our Services
                     </p>
 
@@ -58,20 +58,18 @@ export default function HomeServices({ services }) {
                                         alt={service.title}
                                         fill
                                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                                        className="object-cover blur-[1px] scale-105"
-                                    />
+                                        className="object-cover md:scale-105 md:blur-[1px]" />
 
                                     {/* DARK OVERLAY */}
-                                    <div className="absolute inset-0 bg-black/60"></div>
+                                    <div className="absolute inset-0 bg-black/25 md:bg-black/60"></div>
 
                                     {/* CONTENT */}
-                                    <div className="relative z-10 h-full flex flex-col justify-center items-center text-center p-6 gap-3 text-white">
-
-                                        <h3 className="theme-h3">
+                                    <div className="relative z-10 h-full flex flex-col justify-center items-center text-center p-6 gap-3 text-white bg-gradient-to-t from-black/50 via-black/20 to-transparent">
+                                        <h3 className="theme-h2 drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]">
                                             {service.title}
                                         </h3>
 
-                                        <p className=" text-[var(--light-gray)] line-clamp-3">
+                                        <p className=" text-[var(--light-gray)] drop-shadow-md line-clamp-3">
                                             {service.shortDesc}
                                         </p>
 

@@ -23,31 +23,26 @@ export const data = {
 
   contact: {
     phone: "+91 9897211240",
-    email: "harshitgupta06@gmail.com",
+    email: "shrisaievents.meerut@gmail.com",
 
-    // 🔹 Main Address
     address: [
       "Shop No- 5, Near Abkari Godaam,",
       "Eves Crossing, Budhana Gate,",
       "Meerut - 250002, Uttar Pradesh",
     ],
 
-    // 🔹 Branch Address
     branch: [
       "375/9/293, PL Sharma Road,",
       "Opp. Vijay Shree Complex,",
       "Meerut, Uttar Pradesh",
     ],
 
-    // 🔹 Google Map (Main Location)
     mapEmbed:
       "https://www.google.com/maps?q=Eves+Crossing+Budhana+Gate+Meerut&output=embed",
 
-    // 🔹 Direct Google Maps Link (for button click)
     mapLink:
       "https://www.google.com/maps?q=Eves+Crossing+Budhana+Gate+Meerut",
 
-    // 🔹 Working Hours
     workingHours: "Mon - Sun : 9:00 AM - 10:00 PM",
   },
 

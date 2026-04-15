@@ -38,7 +38,6 @@ export default function Footer() {
             <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[var(--secondary-gold)] to-transparent"></div>
 
             <div className="relative max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-
                 <div className="p-3 rounded-2xl bg-white/5 backdrop-blur-lg border border-white/10 flex flex-col items-center hover:border-[var(--secondary-gold)]/40 transition duration-500    hover:-translate-y-2">
 
                     <Image
@@ -102,12 +101,10 @@ export default function Footer() {
                     </ul>
                 </div>
 
-                <div className="p-5 rounded-2xl bg-white/5 backdrop-blur-lg border border-white/10 hover:border-[var(--secondary-gold)]/40 transition duration-500 hover:-translate-y-2">
-
-                    <h3 className="text-[var(--text-light)] theme-h3 mb-5 relative inline-block">
-                        Contact Us
-                        <span className="absolute left-0 -bottom-1 w-full h-[2px] bg-gradient-to-r from-[var(--secondary-gold)] to-transparent"></span>
-                    </h3>
+                <div className="p-5 rounded-2xl bg-white/5 backdrop-blur-lg border border-white/10 hover:border-[var(--secondary-gold)]/40 transition duration-500 hover:-translate-y-2 lg:min-w-[320px]">                    <h3 className="text-[var(--text-light)] theme-h3  mb-5 relative inline-block">
+                    Contact Us
+                    <span className="absolute left-0 -bottom-1 w-full h-[2px] bg-gradient-to-r from-[var(--secondary-gold)] to-transparent"></span>
+                </h3>
 
                     <div className="space-y-4 text-base">
 
@@ -131,8 +128,7 @@ export default function Footer() {
 
                         <div className="flex items-center gap-3 group">
                             <FaEnvelope className="text-[var(--secondary-gold)] group-hover:scale-110 transition" />
-                            <p className="text-[var(--light-gray)] group-hover:text-[var(--secondary-gold)] transition cursor-pointer">
-                                {data.contact.email}
+                            <p className="text-[var(--light-gray)] group-hover:text-[var(--secondary-gold)] transition cursor-pointer whitespace-nowrap">                                {data.contact.email}
                             </p>
                         </div>
 
